@@ -1,0 +1,32 @@
+version: "3"
+services:
+  web:
+    build:
+      context: ./web
+    ports: 
+      - 80:80
+    depends_on:
+      - mysql
+    volumes:
+      - "./web/apache.conf:/etc/apache2/sites-available/000-default.conf"
+      - "./:/var/www/html"
+    container_name: "apache-php"
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    container_name: "mysql5.7"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    depends_on:
+      - mysql
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+      - PMA_USER=root
+      - PMA_PASSWORD=root
+    container_name: "phpmyadmin"
