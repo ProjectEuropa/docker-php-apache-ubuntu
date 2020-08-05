@@ -20,7 +20,7 @@ $ docker-compose build
 $ git clone {$Laravelのリポジトリ} laravel
 ```
 
-リポジトリ（ディレクトリの名前を帰るときは）web/apache.confを編集してください
+リポジトリ（ディレクトリの名前を編集するときは）web/apache.confを編集してください
 ```
 <VirtualHost *:80>
         ServerAdmin webmaster@localhost
