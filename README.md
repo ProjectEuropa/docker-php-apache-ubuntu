@@ -1,6 +1,7 @@
 # 環境構築手順
 
 ```docker-php-apache-ubuntu
+docker-php-apache-ubuntu
 ├── docker-compose.yml
 ├── laravel
 └── web
@@ -11,6 +12,7 @@
 ## Dockerfileのビルド
 
 ```console
+# docker-compose.ymlのあるディレイクトリで実行
 $ docker-compose build
 ```
 
