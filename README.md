@@ -33,6 +33,13 @@ $ git clone {$Laravelのリポジトリ} laravel
         </Directory> 
 ```
 
+## docker-composeの立ち上げ
+
+```console
+# docker-compose.ymlのあるディレイクトリで実行
+$ docker-compose up -d
+```
+
 ## Laravelの設定
 
 ```console
