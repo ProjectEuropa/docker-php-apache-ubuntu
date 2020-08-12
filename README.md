@@ -47,6 +47,7 @@ $ docker-compose exec web bash #コンテナ内に入る
 # cd laravel
 # cp .env.example .env # .envファイル生成
 # composer install
+# php artisan key:generate
 ```
 
 [http://localhost/](http://localhost/)にアクセスする。
